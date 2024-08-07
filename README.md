@@ -1,72 +1,45 @@
-# Solidity Storage Contracts
+#Solidity Storage Contracts
+This repository contains three Solidity smart contracts: SimpleStorage, StorageFactory, and ExtraStorage. These contracts demonstrate basic storage functionalities, inheritance, and interaction between contracts.
 
-This repository contains two Solidity smart contracts: `SimpleStorage` and `StorageFactory`.
+Contracts
+#SimpleStorage
+The SimpleStorage contract allows you to store and retrieve a favorite number. It also supports adding people with their favorite numbers and mapping names to their favorite numbers.
 
-## SimpleStorage
+Functions:
+store: Stores a given number as the favorite number.
+retrieve: Returns the stored favorite number.
+addPerson: Adds a person with their favorite number and maps their name to this number.
+#StorageFactory
+The StorageFactory contract allows the creation of multiple SimpleStorage contracts and provides functions to interact with them.
 
-The `SimpleStorage` contract allows for storing, retrieving, and managing a favorite number and a list of people with their favorite numbers.
+Functions:
+createSimpleStorageContract: Creates a new SimpleStorage contract and stores it in an array.
+sfStore: Stores a number in a specific SimpleStorage contract.
+sfGet: Retrieves the favorite number from a specific SimpleStorage contract.
+#ExtraStorage
+The ExtraStorage contract inherits from SimpleStorage and overrides the store function to add 5 to the given number before storing it.
 
-### Features
+Functions:
+store: Stores the given number plus 5 as the favorite number.
+Getting Started
 
-- Store a favorite number.
-- Retrieve the stored favorite number.
-- Add people with their favorite numbers.
-- Mapping from name to favorite number.
+#Prerequisites
+Solidity ^0.8.10
+Truffle or Hardhat for development and testing
+Node.js and npm
 
-### Functions
+#Installation
+Clone the repository:
+git clone https://github.com/vasanthmarimuth/solidity-storage-contracts.git
+cd solidity-storage-contracts
+Install dependencies using npm.
 
-- `store(uint256 _favoriteNumber)`: Stores a favorite number.
-- `retrieve() view returns (uint256)`: Retrieves the stored favorite number.
-- `addPerson(string memory _name, uint256 _favoriteNumber)`: Adds a person with their favorite number to the list and updates the mapping.
+#Usage
+Compile the contracts using Truffle or Hardhat.
+Deploy the contracts to a blockchain network.
+Interact with the contracts via the console or a frontend application.
+#License
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-## StorageFactory
-
-The `StorageFactory` contract allows for creating and managing multiple instances of the `SimpleStorage` contract.
-
-### Features
-
-- Create new instances of the `SimpleStorage` contract.
-- Store a favorite number in a specific `SimpleStorage` instance.
-- Retrieve the favorite number from a specific `SimpleStorage` instance.
-
-### Functions
-
-- `createSimpleStorageContract()`: Creates a new instance of the `SimpleStorage` contract and stores it in an array.
-- `sfStore(uint256 _simpleStorageIndex, uint256 _simpleStorageNumber)`: Stores a favorite number in the `SimpleStorage` instance at the given index.
-- `sfGet(uint256 _simpleStorageIndex) view returns (uint256)`: Retrieves the favorite number from the `SimpleStorage` instance at the given index.
-
-## Getting Started
-
-### Prerequisites
-
-- Solidity compiler (solc)
-- A development environment such as Remix, Truffle, or Hardhat.
-
-### Installing
-
-1. Clone the repository:
-    ```sh
-    git clone https://github.com/your-username/solidity-storage-contracts.git
-    cd solidity-storage-contracts
-    ```
-
-2. Compile the contracts using your preferred development environment.
-
-3. Deploy the `StorageFactory` contract, which will allow you to create and interact with `SimpleStorage` instances.
-
-## Usage
-
-1. Deploy the `StorageFactory` contract.
-2. Use the `createSimpleStorageContract` function to create new instances of `SimpleStorage`.
-3. Store a favorite number in a specific `SimpleStorage` instance using the `sfStore` function.
-4. Retrieve the favorite number from a specific `SimpleStorage` instance using the `sfGet` function.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Acknowledgments
-
-- Solidity documentation: [Solidity](https://docs.soliditylang.org/)
-- Ethereum: [Ethereum](https://ethereum.org/)
-
+Acknowledgments
+Inspired by Solidity tutorials and documentation.
