@@ -30,7 +30,7 @@ Node.js and npm
 
 # Installation
 Clone the repository:
-git clone https://github.com/vasanthmarimuth/solidity-storage-contracts.git
+git clone https://github.com/vasanthmarimuth/Solidity_Storage_Contracts.git
 cd solidity-storage-contracts
 Install dependencies using npm.
 
