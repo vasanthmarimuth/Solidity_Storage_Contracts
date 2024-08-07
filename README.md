@@ -1,7 +1,7 @@
 # Solidity Storage Contracts
 This repository contains three Solidity smart contracts: SimpleStorage, StorageFactory, and ExtraStorage. These contracts demonstrate basic storage functionalities, inheritance, and interaction between contracts.
 
-Contracts
+# Contracts
 # SimpleStorage
 The SimpleStorage contract allows you to store and retrieve a favorite number. It also supports adding people with their favorite numbers and mapping names to their favorite numbers.
 
